@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avisly Masks">
+    <meta name="author" content="Audrey Bosquet">
+
+    <title>Avisly</title>
+        
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        
+        <div id="top">
+            <div class="title">
+                    <img class="logo" src="img/avisly_logo-02.png">
+            </div>
+            <div class="caption">custom personal heating</div>
+        </div>
+        
+        <div class="middle-container">
+        <button type="button" class="prettybutton" id="opencontact">contact us</button>
+        </div>
+        <div class="middle-container" id="contact-container" style="display: none;">
+            <p>email <a href="mailto:team@avisly.com">team@avisly.com</a> or fill out this form:</p>
+            <form class="contact-form" action="//formspree.io/team@avisly.com" method="post">
+                <div class="row">
+                    <div class="contact-input col-xs-6">
+            <input type="text" class="form-control" name="name" placeholder="name">
+                    </div>
+                    <div class="contact-input col-xs-6">
+            <input type="email" class="form-control" name="_replyto" placeholder="email">
+                    </div>
+                </div>
+                <div class="message-container">
+                    <textarea rows="4" cols="100" class="form-control" name="body" placeholder="message" maxlength="500" style="resize:none"></textarea>
+                </div>
+                <input type="submit" class="prettybutton contact-send" value="send">
+                <input type="hidden" name="_next" value="//avisly.com" />
+            </form>
+        </div>
+        
+    </body>
+</html>
