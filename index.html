@@ -14,10 +14,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 
@@ -29,18 +28,97 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            
+            $('.carousel').carousel({
+            interval: 2500,
+            pause: false
+            })
+            
+        });
+        
+    </script>
         
     </head>
     
     <body>
+<!--        cover page with scrolling images and title - would like to add custom indicators and something to encourage scrolling-->
+        <div class="container coverpage">
+            <div class="row vertical-align">
+                <div class="col-sm-3 covertext">
+                    <div id="top">
+                        <div class="title">
+                                AVISLY
+                        </div>
+                        <div class="caption">custom personal heating</div>
+                        <div class="scroll-down"><img id="titlescroll" src="img/scroll_down.png"></div>
+                    </div><!-- #top -->
         
-        <div id="top">
-            <div class="title">
-                    <img class="logo" src="img/avisly_logo-02.png">
-            </div>
-            <div class="caption">custom personal heating</div>
+        
+                </div><!-- covertext -->
+                
+                <div class="col-sm-9 imageslide">
+                <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item">
+                          <img src="img/editedANB_5936.JPG" alt="Mask 1">
+                        </div>
+
+                        <div class="item active">
+                          <img src="img/editedANB_5937.JPG" alt="Mask 2">
+                        </div>
+
+                        <div class="item">
+                          <img src="img/ANB_5914edite.jpg" alt="Mask 3">
+                        </div>
+                      </div><!-- carousel-inner -->
+                    </div><!-- carousel -->
+                </div><!-- imageslide -->
+            </div><!-- row -->
+        </div><!-- container coverpage -->
+        <div id="navbar-wrapper" class="navbar-wrapper" style="padding: 0">
+            <div id="nav" class="navbar navbar-default" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> 
+                         <span class="sr-only">Toggle navigation</span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+<!--                         </button> <a href="#" class="navbar-brand">A & D</a>-->
+                    </div><!-- navbar-header -->
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav nav-justified">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#technology">Technology</a></li>
+                            <li><a href="#specs">Specs</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div><!-- container -->
+            </div><!-- navbar -->
+        </div><!-- navbar-wrapper -->
+        <div class="Work">
+            <div class="contenttitle">
+                WORK
+            </div>  
+            
         </div>
-        
+<!--        Sections needed: Technology/Specs? Work Team Contact-->
+        <div class="other_content">
+            <p>BLAHBLAHBLAH</p>
+        </div>
         <div class="middle-container">
         <button type="button" class="prettybutton" id="opencontact">contact us</button>
         </div>
@@ -61,7 +139,7 @@
                 <input type="submit" class="prettybutton contact-send" value="send">
                 <input type="hidden" name="_next" value="//avisly.com" />
             </form>
-        </div>
+            </div>
         
     </body>
 </html>

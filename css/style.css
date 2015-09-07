@@ -15,32 +15,52 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BEBAS/BebasNeue Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BEBAS/BebasNeue Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BEBAS/BebasNeue Thin.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BEBAS/BebasNeue Book.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BEBAS/BebasNeue Light.ttf");
+    font-weight: 200;
+}
+
 body {
     color: #5a5a5a;
     height: 100%;
     width:100%;
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: deepskyblue;
-/*
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-*/
     position: relative;
+    background-color: #ebebeb;
 }
 
 /*Responsive Text*/
 
 @media all and (max-width: 1200px) { /* screen size until 1200px */
     body {
-        font-size: 1.5em; /* 1.5x default size */
+        font-size: 1.3em; /* 1.5x default size */
         }
     }
 @media all and (max-width: 1100px) { /* screen size until 1200px */
     body {
-        font-size: 1.35em; /* 1.35x default size */
+        font-size: 1.2em; /* 1.35x default size */
         }
     }
 @media all and (max-width: 1000px) { /* screen size until 1000px */
@@ -52,6 +72,10 @@ body {
     body {
         font-size: 1.0em; /* default size */
         }
+    .vertical-align {
+      display: inline !important;
+      flex-direction: none !important;
+    }
 }
 @media all and (max-width: 500px) { /* screen size until 500px */
     body {
@@ -63,33 +87,147 @@ body {
 
 html{height:100%;}
 
+/*COVER PAGE STUFF ----------------------------------------------------->*/
 
-/*HEADER STUFF --------------------------------------------------------->*/
-.logo {
-    width: 300px;
-    height: auto;
-    position: relative;
-    left: 5px;
+.container{
+    width: 100%;
+    height: 100%; 
+}
+
+.row{
+    height: 100%;
+}
+
+.coverpage{
+    background-color: black;
+    padding: 0;
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Optional, to align inner items 
+                              horizontally inside the column */
+}
+
+.imageslide {
+    background-color: black;
+}
+
+/*CAROUSEL STUFF ------------------------------------------------------>*/
+
+/*
+  Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+*/
+#myCarousel{
+    padding: 15px 15px 30px 15px;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+/*TITLE STUFF --------------------------------------------------------->*/
+
+.covertext{
+    padding: 50px 0;
 }
 
 #top{
-    padding-top: 200px;
+    height: 100%;
 }
 
 .caption{
-    padding-top: 20px;
+    white-space: nowrap;
+    padding-top: 10px;
     width:100%;
     text-align: center;
     font-family: 'Roboto Condensed', cursive;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.41em;
     color: #fff;
 }
 
 .title {
 /*    width: 100%;*/
     text-align: center;
+    color: white;
+    font-size: 7em;
+    font-family: "Bebas Neue";
+    font-weight: 200;
+    text-shadow: 0px 0px 4px #000000;
+    line-height: .8em;
 }
+
+#titlescroll{
+    height: 50px;
+}
+
+.scroll-down{
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+/*NAVBAR STUFF ------------------------------------------------------->*/
+
+
 
 /*FORM STUFF --------------------------------------------------------->*/
 
