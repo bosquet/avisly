@@ -141,7 +141,7 @@ html{height:100%;}
   Inspired from:  http://codepen.io/Rowno/pen/Afykb 
 */
 #myCarousel{
-    padding: 15px 15px 30px 15px;
+    padding: 30px 15px 45px 15px;
 }
 
 .carousel-fade .carousel-inner .item {
@@ -167,6 +167,10 @@ html{height:100%;}
 
 .carousel-fade .carousel-control {
   z-index: 2;
+}
+
+.carousel img{
+    height:auto;
 }
 
 /*
