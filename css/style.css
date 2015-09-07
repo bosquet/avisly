@@ -55,21 +55,25 @@ body {
     margin: 0 !important;
 }
 
+.center{
+    text-align: center;
+}
+
 /*Responsive Text*/
 
 @media all and (max-width: 1200px) { /* screen size until 1200px */
     body {
-        font-size: 1.3em; /* 1.5x default size */
+        font-size: 1.5em; /* 1.5x default size */
         }
     }
 @media all and (max-width: 1100px) { /* screen size until 1200px */
     body {
-        font-size: 1.2em; /* 1.35x default size */
+        font-size: 1.35em; /* 1.35x default size */
         }
     }
 @media all and (max-width: 992px) { /* screen size until 1000px */
     body {
-        font-size: 1.1em; /* 1.2x default size */
+        font-size: 1.2em; /* 1.2x default size */
         }
     .vertical-align {
       display: inline !important;
@@ -272,7 +276,7 @@ html{height:100%;}
 .content{
     width: 100%;
     height: auto;
-    padding: 50px 10%;
+    padding: 75px 10%;
 /*    text-align: center;*/
     overflow: hidden;
 }
@@ -296,6 +300,10 @@ html{height:100%;}
 
 .teammember{
     text-align: center;
+}
+
+.teamimage{
+    padding: 15px;
 }
 
 /*FORM STUFF --------------------------------------------------------->*/
