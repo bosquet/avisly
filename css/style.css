@@ -321,7 +321,7 @@ html{height:100%;}
 }
 
 .teamimage:hover img{
-    opacity: .6;
+    opacity: .4;
     transition: opacity .1s ease-in-out;
     -moz-transition: opacity .1s ease-in-out;
     -webkit-transition: opacity .1s ease-in-out;
@@ -337,7 +337,7 @@ html{height:100%;}
 .teamname{
     display:none;
     position: absolute;
-    font-size: 1.1em;
+    font-size: 1.3em;
     height: 100%;
     margin-top: -43%;
     width: calc(100% - 60px);
