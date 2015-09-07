@@ -34,7 +34,13 @@
             $('.carousel').carousel({
             interval: 2500,
             pause: false
-            })
+            });
+            
+            $("#navbar-wrapper").affix({
+                  offset: {
+                            top: function() {return $('.coverpage').height();}
+                    }
+                });
             
         });
         
@@ -52,7 +58,7 @@
                                 AVISLY
                         </div>
                         <div class="caption">custom personal heating</div>
-                        <div class="scroll-down"><img id="titlescroll" src="img/scroll_down.png"></div>
+                        <div class="scroll-down"><a href="#work"><img id="titlescroll" src="img/scroll_down.png"></a></div>
                     </div><!-- #top -->
         
         
@@ -110,7 +116,7 @@
             </div><!-- navbar -->
         </div><!-- navbar-wrapper -->
         <div class="spacer"></div>
-        <div class="content work">
+        <div id="work" class="content work">
             <div class="col-md-6">
             <div class="contenttitle">
                 WORK
@@ -126,7 +132,18 @@
         </div>
 <!--        Sections needed: Technology/Specs? Work Team Contact-->
         <div class="content team">
-            <p>BLAHBLAHBLAH</p>
+            <div class="col-sm-4 teammember">
+                <div class="teamimage"><img class="img-responsive img-circle" src=""></div>
+                <div class="teamtext">Audrey Bosquet</div>
+            </div>
+            <div class="col-sm-4 teammember">
+                <div class="teamimage"><img class="img-responsive img-circle" src=""></div>
+                <div class="teamtext">Sam Cocjin</div>
+            </div>
+            <div class="col-sm-4 teammember">
+                <div class="teamimage"><img class="img-responsive img-circle" src="img/arash.jpg"></div>
+                <div class="teamtext">Arash Kani</div>
+            </div>
         </div>
         <div class="middle-container">
         <button type="button" class="prettybutton" id="opencontact">contact us</button>

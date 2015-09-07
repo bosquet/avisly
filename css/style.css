@@ -222,6 +222,17 @@ html{height:100%;}
 
 #titlescroll{
     height: 50px;
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+}
+
+#titlescroll:hover{
+    opacity: .6;
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
 }
 
 .scroll-down{
@@ -232,29 +243,59 @@ html{height:100%;}
 
 /*NAVBAR STUFF ------------------------------------------------------->*/
 
+.navbar{
+/*    height: 60px;*/
+    font-size: 2em;
+    font-family: "Bebas Neue";
+    font-weight: 300;
+    background-color: grey;
+    border: none;
+    border-radius: 0;
+}
 
+#navbar-wrapper.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
+.navbar a{
+    color: white;
+}
 
 /*CONTENT STUFF ------------------------------------------------------>*/
 .spacer{
-    height: 100px;
+    height: 50px;
 }
 
 .content{
     width: 100%;
     height: auto;
-    padding: 0 10%;
+    padding: 50px 10%;
 /*    text-align: center;*/
     overflow: hidden;
 }
 
 .contenttitle{
-    font-size: 3em;
+    font-size: 5em;
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    line-height: .75em;
+    margin-bottom: 15px;
+    color: #00baff;
 }
 
 /*WORK STUFF --------------------------------------------------------->*/
 
 .visualwork img{
     width: 100%;
+}
+
+/*TEAM STUFF --------------------------------------------------------->*/
+
+.teammember{
+    text-align: center;
 }
 
 /*FORM STUFF --------------------------------------------------------->*/
