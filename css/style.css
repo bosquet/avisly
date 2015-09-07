@@ -297,7 +297,7 @@ html{height:100%;}
     width: 100%;
 }
 
-.contenttext p{
+.contenttext{
     color: #1d1d1d;
 }
 
@@ -316,15 +316,83 @@ html{height:100%;}
 }
 
 .teamimage{
-    
+    cursor: pointer;
     padding: 15px;
 }
 
-.teamname{
-    font-size: 1.1em;
+.teamimage:hover img{
+    opacity: .6;
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
 }
 
-/*FORM STUFF --------------------------------------------------------->*/
+.teamimage img{
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+}
+
+.teamname{
+    display:none;
+    position: absolute;
+    font-size: 1.1em;
+    height: 100%;
+    margin-top: -43%;
+    width: calc(100% - 60px);
+    /* Firefox */
+    width: -moz-calc(100% - 60px);
+    /* WebKit */
+    width: -webkit-calc(100% - 60px);
+    /* Opera */
+    width: -o-calc(100% - 60px);
+    /* Standard */
+    width: calc(100% - 60px);
+}
+
+.teamdescription{
+    display: none;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    margin: 10px 15px 0 15px;
+    background: #00baff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: calc(100% - 60px);
+    /* Firefox */
+    width: -moz-calc(100% - 60px);
+    /* WebKit */
+    width: -webkit-calc(100% - 60px);
+    /* Opera */
+    width: -o-calc(100% - 60px);
+    /* Standard */
+    width: calc(100% - 60px);
+}
+
+.teamdescription:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 20px 20px;
+    border-color: #00baff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -20px;
+    top: -20px;
+    left: 50%;
+}
+
+.team h2{
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+/*CONTACT STUFF ------------------------------------------------------>*/
 
 #opencontact{
     margin: 10px auto;
@@ -336,22 +404,16 @@ html{height:100%;}
     margin-top: 20px;    
 }
 
-.contact-form{
-    width: 300px;
-    margin: 10px auto;
-}
-
 .message-container{
     padding-top: 15px;
 }
 
-p {
-    color: #fff;
+.contact p {
     margin-top: 40px;
 }
 
 #contact-container a{
-    color: #ffeb00;
+    color: #00baff;
 }
 
 .form-control{
@@ -359,8 +421,8 @@ p {
 }
 
 .prettybutton{
-    background-color: #ebebeb;
-    color: #5a5a5a;
+    background-color: #00baff;
+    color: white;
     border-style: none;
     padding: 5px 10px;
     font-size: 1em;
@@ -368,29 +430,10 @@ p {
 }
 
 .prettybutton:hover{
-    background-color: #e2e2e2;
+    background-color: #52d7ff;
 }
 
 .contact-send{
     margin-top: 30px;
     margin-bottom: 50px;
-}
-    
-/*FOOTER STUFF --------------------------------------------------------->*/
-
-footer {
-    height: 70px;
-    width: 100%;
-    display: table;
-    margin: auto;
-    background-color: rgba(54, 160, 152, 0.93);
-    color: #fff;
-    text-transform: lowercase;
-    font-size: 1.5em;
-    font-family: 'learning_curve_proregular', cursive;
-}
-
-footer .content-block {
-    padding-top: 15px;
-    text-align: left;
 }
