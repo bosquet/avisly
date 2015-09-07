@@ -31,8 +31,13 @@
     <script>
         $(document).ready(function() {
             
-            $('.carousel').carousel({
+            $('#myCarousel').carousel({
             interval: 3000,
+            pause: false
+            });
+            
+            $('#contentCarousel').carousel({
+            interval: false,
             pause: false
             });
             
@@ -76,15 +81,15 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
                         <div class="item">
-                          <img src="img/editedANB_5936.JPG" alt="Mask 1">
+                          <img src="img/mask1.png" alt="Mask 1">
                         </div>
 
                         <div class="item active">
-                          <img src="img/editedANB_5937.JPG" alt="Mask 2">
+                          <img src="img/mask2.png" alt="Mask 2">
                         </div>
 
                         <div class="item">
-                          <img src="img/ANB_5914edite.jpg" alt="Mask 3">
+                          <img src="img/mask3.png" alt="Mask 3">
                         </div>
                       </div><!-- carousel-inner -->
                     </div><!-- carousel -->
@@ -125,26 +130,66 @@
                 </div>
             </div>
             <div class="col-md-8 visualwork">
-                <img src="gif/documentation3_50x100.gif">
+                <div id="contentCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#contentCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#contentCarousel" data-slide-to="1"></li>
+                    <li data-target="#contentCarousel" data-slide-to="2"></li>
+                    <li data-target="#contentCarousel" data-slide-to="3"></li>
+                    <li data-target="#contentCarousel" data-slide-to="4"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="gif/documentation4x3.gif" alt="Masks">
+                    </div>
+                    <div class="item">
+                      <img src="gif/laser.gif" alt="Laser">
+                    </div>
+                    <div class="item">
+                      <img src="gif/sewing.gif" alt="Sewing">
+                    </div>
+                    <div class="item">
+                      <img src="gif/mill2.gif" alt="Milling">
+                    </div>
+                      <div class="item">
+                      <img src="gif/formingsmall.gif" alt="Forming">
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#contentCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#contentCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
             </div>
             
         </div>
 <!--        Sections needed: Technology/Specs? Work Team Contact-->
-        <div class="content team">
+        <div id="team" class="content team">
             <div class="contenttitle center">
                 TEAM
             </div>
+            <div class="allmembers">
             <div class="col-sm-4 teammember">
                 <div class="teamimage"><img class="img-responsive img-circle" src="img/audrey2.jpg"></div>
-                <div class="teamtext">Audrey Bosquet</div>
+                <div class="teamname">Audrey Bosquet</div>
             </div>
             <div class="col-sm-4 teammember">
                 <div class="teamimage"><img class="img-responsive img-circle" src="img/sam.jpg"></div>
-                <div class="teamtext">Sam Cocjin</div>
+                <div class="teamname">Sam Cocjin</div>
             </div>
             <div class="col-sm-4 teammember">
                 <div class="teamimage"><img class="img-responsive img-circle" src="img/arash.jpg"></div>
-                <div class="teamtext">Arash Kani</div>
+                <div class="teamname">Arash Kani</div>
+            </div>
             </div>
         </div>
         <div class="middle-container">
