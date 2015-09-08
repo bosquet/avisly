@@ -320,11 +320,16 @@ html{height:100%;}
 
 .teamimage{
     cursor: pointer;
-    padding: 15px;
+    margin: 15px;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(#1d1d1d, #c6c6c6); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#1d1d1d, #c6c6c6); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#1d1d1d, #c6c6c6); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#1d1d1d, #c6c6c6); /* Standard syntax */
 }
 
 .teamimage:hover img{
-    opacity: .4;
+    opacity: .6;
     transition: opacity .1s ease-in-out;
     -moz-transition: opacity .1s ease-in-out;
     -webkit-transition: opacity .1s ease-in-out;
@@ -339,6 +344,7 @@ html{height:100%;}
 
 .teamname{
     display:none;
+    color: white;
     position: absolute;
     font-size: 1.3em;
     height: 100%;
