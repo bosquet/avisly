@@ -75,13 +75,19 @@ body {
         font-size: 1.35em; /* 1.35x default size */
         }
     }
-@media all and (max-width: 992px) { /* screen size until 1000px */
+@media all and (max-width: 992px) { /* screen size until 1000px ---where cols go to md */
     body {
         font-size: 1.2em; /* 1.2x default size */
         }
     .vertical-align {
       display: inline !important;
       flex-direction: none !important;
+    }
+    .covertext{
+        font-size: 1.3em !important;
+    }
+    #top{
+        margin-top: 30px !important;
     }
     .coverpage{
         height: auto !important;
@@ -90,7 +96,7 @@ body {
 }
 @media all and (max-width: 767px) { /* screen size until 767px ---where cols go to xs */
     body {
-        font-size: 1.0em; /* default size */
+        font-size: 1.1em;  /*default size */
         }
 }
 @media all and (max-width: 500px) { /* screen size until 500px */
@@ -301,12 +307,31 @@ html{height:100%;}
     width: 100%;
 }
 
+.visualwork .carousel-control {
+    opacity: .8;
+}
+
+.work-helper {
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 15px;\
+}
+
+.visualwork {
+    margin: 15px auto;
+    padding: 30px auto;
+}
+
 .contenttext{
     color: #1d1d1d;
 }
 
 .work-caption:not(.current) {
     display: none;
+}
+
+.work-caption, .aboutdescription {
+    font-size: 1.2em;
 }
 
 /*TEAM STUFF --------------------------------------------------------->*/
@@ -363,27 +388,35 @@ html{height:100%;}
 .teamdescription{
     display: none;
     color: white;
-    position: absolute;
-    padding: 10px;
+    position: relative;
+    padding: 15px 20px 10px 20px;
     margin: 10px 15px 0 15px;
     background: #00baff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    width: calc(100% - 60px);
+    width: calc(100% - 30px);
     /* Firefox */
-    width: -moz-calc(100% - 60px);
+    width: -moz-calc(100% - 30px);
     /* WebKit */
-    width: -webkit-calc(100% - 60px);
+    width: -webkit-calc(100% - 30px);
     /* Opera */
-    width: -o-calc(100% - 60px);
+    width: -o-calc(100% - 30px);
     /* Standard */
-    width: calc(100% - 60px);
+    width: calc(100% - 30px);
 }
 
-.teamdescription:after {
+.teamdescription h2{
+    margin-top: -15px;
+}
+
+.teamdescription p{
+    font-size: 1.3em;
+}
+
+.teamdescription:before {
     content: '';
-    position: absolute;
+    position: relative;
     border-style: solid;
     border-width: 0 20px 20px;
     border-color: #00baff transparent;
@@ -391,7 +424,7 @@ html{height:100%;}
     width: 0;
     z-index: 1;
     margin-left: -20px;
-    top: -20px;
+    top: -28px;
     left: 50%;
 }
 
